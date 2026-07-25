@@ -1,16 +1,11 @@
 package com.recoverease;
 
-import com.recoverease.service.CheckInService;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-@TestPropertySource(properties = {
-        "gemini.api.key=test-key",
-        "spring.datasource.url=jdbc:h2:mem:testdb"
-})
+@ActiveProfiles("test")
 class RecoverEaseApplicationTests {
 
     @Test
